@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: guru.springframwork.msscbeerservice.web.controller.BeerControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.71 s <<< FAILURE! - in guru.springframwork.msscbeerservice.web.controller.BeerControllerTest
+updateBeerById  Time elapsed: 0.263 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<400>
+	at guru.springframwork.msscbeerservice.web.controller.BeerControllerTest.updateBeerById(BeerControllerTest.java:54)
+
+saveNewBeer  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at guru.springframwork.msscbeerservice.web.controller.BeerControllerTest.saveNewBeer(BeerControllerTest.java:43)
+
