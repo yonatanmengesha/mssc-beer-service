@@ -72,6 +72,7 @@ class BeerControllerTest {
 
     @Test
    public void getBeerById() throws Exception {
+
         given(beerRepository.findById(any(UUID.class))).
                 willReturn(Optional.of(beerMapper.beerDtoToBeer(validBeer)));
 
