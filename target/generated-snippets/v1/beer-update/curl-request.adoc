@@ -1,6 +1,0 @@
-[source,bash]
-----
-$ curl 'https://dev.springframework.jotech:80/api/v1/beer/593e04a1-babf-481a-bae7-510a8a520631' -i -X PUT \
-    -H 'Content-Type: application/json;charset=UTF-8' \
-    -d '{"id":null,"version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}'
-----

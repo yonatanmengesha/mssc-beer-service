@@ -1,9 +1,0 @@
-[source,http,options="nowrap"]
-----
-PUT /api/v1/beer/593e04a1-babf-481a-bae7-510a8a520631 HTTP/1.1
-Content-Type: application/json;charset=UTF-8
-Content-Length: 159
-Host: dev.springframework.jotech:80
-
-{"id":null,"version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
-----
