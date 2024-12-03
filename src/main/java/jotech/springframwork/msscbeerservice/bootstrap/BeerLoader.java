@@ -5,6 +5,7 @@ import jotech.springframwork.msscbeerservice.repositories.BeerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+
 import java.math.BigDecimal;
 
 @Component
@@ -24,6 +25,7 @@ public class BeerLoader  implements CommandLineRunner {
     }
 
     private void loadBeerObject() {
+
 
         if(beerRepository.count()==0){
 
