@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+{"id":null,"version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
+----

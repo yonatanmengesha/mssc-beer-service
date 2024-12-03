@@ -1,0 +1,14 @@
+jotech\springframwork\msscbeerservice\web\mappers\BeerMapperImpl.class
+jotech\springframwork\msscbeerservice\web\mappers\DateMapper.class
+jotech\springframwork\msscbeerservice\web\model\BeerPagedList.class
+jotech\springframwork\msscbeerservice\web\controller\BeerController.class
+jotech\springframwork\msscbeerservice\domain\Beer$BeerBuilder.class
+jotech\springframwork\msscbeerservice\MsscBeerServiceApplication.class
+jotech\springframwork\msscbeerservice\repositories\BeerRepository.class
+jotech\springframwork\msscbeerservice\web\controller\MvcExceptionHandler.class
+jotech\springframwork\msscbeerservice\web\model\BeerDto$BeerDtoBuilder.class
+jotech\springframwork\msscbeerservice\web\mappers\BeerMapper.class
+jotech\springframwork\msscbeerservice\domain\Beer.class
+jotech\springframwork\msscbeerservice\web\model\BeerStyleEnum.class
+jotech\springframwork\msscbeerservice\web\model\BeerDto.class
+jotech\springframwork\msscbeerservice\bootstrap\BeerLoader.class

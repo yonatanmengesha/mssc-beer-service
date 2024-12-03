@@ -1,0 +1,9 @@
+[source,http,options="nowrap"]
+----
+PUT /api/v1/beer/bd6b5c2d-d30e-4035-b34f-d97beeac11fc HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 159
+Host: dev.springframework.jotech:80
+
+{"id":null,"version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
+----
