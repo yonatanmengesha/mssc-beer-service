@@ -1,6 +1,6 @@
 [source,bash]
 ----
-$ curl 'https://dev.springframework.jotech:80/api/v1/beer/244a7464-69bc-4a5b-9a52-31008796d176' -i -X PUT \
+$ curl 'https://dev.springframework.jotech:80/api/v1/beer/03e616a5-3bc8-401b-ba07-e346e9afee34' -i -X PUT \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -d '{"id":"244a7464-69bc-4a5b-9a52-31008796d176","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}'
+    -d '{"id":"03e616a5-3bc8-401b-ba07-e346e9afee34","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}'
 ----

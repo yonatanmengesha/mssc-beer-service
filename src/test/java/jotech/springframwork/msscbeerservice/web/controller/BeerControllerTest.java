@@ -114,6 +114,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         given(beerService.saveBeer(any())).willReturn(beerDto);
 
+        when(beerService.saveBeer(any(BeerDto.class))).thenReturn(beerDto);
+
         ConstrainedFields fields = new ConstrainedFields(BeerDto.class);
 
         mockMvc.perform(post("/api/v1/beer/")

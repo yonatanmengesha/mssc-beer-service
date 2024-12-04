@@ -1,4 +1,4 @@
 [source,options="nowrap"]
 ----
-{"id":"f8727533-b6a6-4f3c-bb28-daa1b618b6cb","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
+{"id":"b1414e98-c26d-4778-aa56-fa035eb02cb2","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
 ----
