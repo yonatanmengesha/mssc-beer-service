@@ -74,4 +74,9 @@ public class BeerServiceImpl implements BeerService {
 
     }
 
+    @Override
+    public Long count() {
+        return beerRepository.count();
+    }
+
 }

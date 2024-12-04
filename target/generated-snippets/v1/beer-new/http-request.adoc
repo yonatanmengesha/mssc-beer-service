@@ -5,5 +5,5 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 193
 Host: dev.springframework.jotech:80
 
-{"id":"b1414e98-c26d-4778-aa56-fa035eb02cb2","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
+{"id":"2537efe3-9d13-4842-8cd3-a9a84a24bb34","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
 ----

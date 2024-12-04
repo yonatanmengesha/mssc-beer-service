@@ -1,4 +1,4 @@
 [source,options="nowrap"]
 ----
-{"id":"095177b8-a5cf-4423-8b6e-1509c3fb73af","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"Beer 1","beerStyle":"PALE_ALE","upc":2465879314,"price":12,"quantityOnHand":null}
+{"id":"8f9fa7a8-812e-44fc-a6da-5f51a9cbfd6b","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"Beer 1","beerStyle":"PALE_ALE","upc":2465879314,"price":12,"quantityOnHand":null}
 ----
