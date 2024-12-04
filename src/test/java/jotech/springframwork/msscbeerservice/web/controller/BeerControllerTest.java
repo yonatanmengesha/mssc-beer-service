@@ -81,7 +81,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
                         .param("iscold", "yes")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                 .andExpect(jsonPath("$.beerName",is("Beer 1")))
+                 .andExpect(jsonPath("$.beerName",is(validBeer.getBeerName())))
                 .andDo(document("v1/beer-get",
                         pathParameters(
                                 parameterWithName("beerId").description("UUID of desired beer to get.")

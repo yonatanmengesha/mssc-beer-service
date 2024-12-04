@@ -2,5 +2,5 @@
 ----
 $ curl 'https://dev.springframework.jotech:80/api/v1/beer/' -i -X POST \
     -H 'Content-Type: application/json;charset=UTF-8' \
-    -d '{"id":"9c83240c-d44c-4a76-9331-6e2801a44773","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}'
+    -d '{"id":"f8727533-b6a6-4f3c-bb28-daa1b618b6cb","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}'
 ----

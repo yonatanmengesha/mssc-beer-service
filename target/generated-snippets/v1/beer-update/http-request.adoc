@@ -1,9 +1,9 @@
 [source,http,options="nowrap"]
 ----
-PUT /api/v1/beer/82dd6c2f-56fa-49bb-92a0-1e4a5a25ac88 HTTP/1.1
+PUT /api/v1/beer/244a7464-69bc-4a5b-9a52-31008796d176 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
 Content-Length: 193
 Host: dev.springframework.jotech:80
 
-{"id":"82dd6c2f-56fa-49bb-92a0-1e4a5a25ac88","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
+{"id":"244a7464-69bc-4a5b-9a52-31008796d176","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
 ----

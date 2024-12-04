@@ -35,10 +35,10 @@ public class BeerServiceImpl implements BeerService {
     @Override
     public BeerDto findBeerById(UUID beerId) {
 
-        Beer beer = beerRepository.findById(beerId).get();
-        if(beerRepository.count() == 0 ){
+       Optional<Beer>  optionalBeer = beerRepository.findById(beerId);
+        if(optionalBeer.isPresent() ){
 
-            return  beerMapper.beerToBeerDto(beer);
+            return  beerMapper.beerToBeerDto(optionalBeer.get());
         }
 
         return null;
