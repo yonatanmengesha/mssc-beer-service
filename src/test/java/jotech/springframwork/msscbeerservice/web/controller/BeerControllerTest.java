@@ -1,22 +1,20 @@
 package jotech.springframwork.msscbeerservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jotech.springframwork.msscbeerservice.domain.Beer;
-import jotech.springframwork.msscbeerservice.repositories.BeerRepository;
 import jotech.springframwork.msscbeerservice.service.BeerService;
 import jotech.springframwork.msscbeerservice.web.mappers.BeerMapper;
 import jotech.springframwork.msscbeerservice.web.model.BeerDto;
 import jotech.springframwork.msscbeerservice.web.model.BeerStyleEnum;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.MediaType;
-import org.springframework.restdocs.RestDocumentationExtension;
+
 import org.springframework.restdocs.constraints.ConstraintDescriptions;
 import org.springframework.restdocs.payload.FieldDescriptor;
 import org.springframework.test.web.servlet.MockMvc;
@@ -42,7 +40,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureRestDocs(uriScheme = "https", uriHost = "dev.springframework.jotech", uriPort = 80)
 @WebMvcTest(BeerController.class)
 @ComponentScan(basePackages = "jotech.springframwork.msscbeerservice.web.mappers")
-class BeerControllerTest {
+ class BeerControllerTest {
 
     @Autowired
     MockMvc mockMvc;
@@ -59,7 +57,7 @@ class BeerControllerTest {
     BeerDto validBeer;
 
     @BeforeEach
-    public void setUp() {
+     void setUp() {
 
         validBeer = BeerDto.builder()
                 .id(UUID.randomUUID())
@@ -71,7 +69,7 @@ class BeerControllerTest {
     }
 
     @Test
-    public void getBeerById() throws Exception {
+     void getBeerById() throws Exception {
 
        given(beerService.findBeerById(any(UUID.class))).
                 willReturn(validBeer);
@@ -106,7 +104,7 @@ class BeerControllerTest {
 
     @Test
 
-    public void saveNewBeer() throws Exception {
+     void saveNewBeer() throws Exception {
 
       //  UUID beerIdFound= UUID.randomUUID();
         BeerDto beerDto = getValidBeerDto();
@@ -137,7 +135,7 @@ class BeerControllerTest {
     }
 
     @Test
-    public void updateBeerById() throws Exception {
+     void updateBeerById() throws Exception {
 
         UUID beerId =UUID.randomUUID();
         BeerDto updatedBeerDto = BeerDto
