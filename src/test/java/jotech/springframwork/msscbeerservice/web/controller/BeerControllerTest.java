@@ -3,6 +3,7 @@ package jotech.springframwork.msscbeerservice.web.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jotech.springframwork.msscbeerservice.domain.Beer;
 import jotech.springframwork.msscbeerservice.repositories.BeerRepository;
+import jotech.springframwork.msscbeerservice.service.BeerService;
 import jotech.springframwork.msscbeerservice.web.mappers.BeerMapper;
 import jotech.springframwork.msscbeerservice.web.model.BeerDto;
 import jotech.springframwork.msscbeerservice.web.model.BeerStyleEnum;
@@ -27,7 +28,9 @@ import java.util.UUID;
 
 import static org.hamcrest.core.Is.is;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.BDDMockito.given;
+import static org.mockito.Mockito.when;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.*;
 import static org.springframework.restdocs.payload.PayloadDocumentation.*;
@@ -47,7 +50,7 @@ class BeerControllerTest {
     ObjectMapper objectMapper;
 
     @MockBean
-    BeerRepository beerRepository;
+    BeerService beerService;
 
     @Autowired
     BeerMapper beerMapper;
@@ -70,14 +73,17 @@ class BeerControllerTest {
     @Test
     public void getBeerById() throws Exception {
 
-        given(beerRepository.findById(any(UUID.class))).
-                willReturn(Optional.of(beerMapper.beerDtoToBeer(validBeer)));
+       given(beerService.findBeerById(any(UUID.class))).
+                willReturn(validBeer);
+
+      //  given(beerRepository.findById(any(UUID.class))).
+       //         willReturn(Optional.of(beerMapper.beerDtoToBeer(validBeer)));
 
         mockMvc.perform(get("/api/v1/beer/{beerId}", validBeer.getId().toString())
                         .param("iscold", "yes")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                //   .andExpect(jsonPath("$.beerName",is(validBeer.getBeerName())))
+                 .andExpect(jsonPath("$.beerName",is("Beer 1")))
                 .andDo(document("v1/beer-get",
                         pathParameters(
                                 parameterWithName("beerId").description("UUID of desired beer to get.")
@@ -99,10 +105,16 @@ class BeerControllerTest {
     }
 
     @Test
+
     public void saveNewBeer() throws Exception {
 
+      //  UUID beerIdFound= UUID.randomUUID();
         BeerDto beerDto = getValidBeerDto();
+
+      //  beerService.saveBeer(beerDto);
         String beerDtoJson = objectMapper.writeValueAsString(beerDto);
+
+        given(beerService.saveBeer(any())).willReturn(beerDto);
 
         ConstrainedFields fields = new ConstrainedFields(BeerDto.class);
 
@@ -127,13 +139,25 @@ class BeerControllerTest {
     @Test
     public void updateBeerById() throws Exception {
 
-        BeerDto beerDto = getValidBeerDto();
-        String beerDtoJson = objectMapper.writeValueAsString(beerDto);
+        UUID beerId =UUID.randomUUID();
+        BeerDto updatedBeerDto = BeerDto
+                .builder()
+                .id(beerId)
+                .beerName("My Beer")
+                .beerStyle(BeerStyleEnum.ALE)
+                .price(new BigDecimal("4.00"))
+                .upc(123456789L)
+                .build();
+        String beerDtoJson = objectMapper.writeValueAsString(updatedBeerDto);
+
+        given(beerService.updateBeer(any(),any())).willReturn(updatedBeerDto);
+        when(beerService.updateBeer(eq(beerId),any(BeerDto.class))).thenReturn(updatedBeerDto);
         ConstrainedFields fields = new ConstrainedFields(BeerDto.class);
 
-        mockMvc.perform(put("/api/v1/beer/{beerId}", UUID.randomUUID().toString()).
+        mockMvc.perform(put("/api/v1/beer/{beerId}", beerId.toString()).
                         contentType(MediaType.APPLICATION_JSON).
-                        content(beerDtoJson)).andExpect(status().isNoContent())
+                        content(beerDtoJson))
+                .andExpect(status().isNoContent())
                 .andDo(document("v1/beer-update"
                         , requestFields(
 
@@ -153,6 +177,7 @@ class BeerControllerTest {
     BeerDto getValidBeerDto() {
         return BeerDto
                 .builder()
+                .id(UUID.randomUUID())
                 .beerName("My Beer")
                 .beerStyle(BeerStyleEnum.ALE)
                 .price(new BigDecimal("4.00"))
