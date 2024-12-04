@@ -2,7 +2,7 @@
 |Path|Type|Description
 
 |`+id+`
-|`+Null+`
+|`+String+`
 |Id of Beer
 
 |`+version+`
@@ -18,19 +18,19 @@
 |Date Updated
 
 |`+beerName+`
-|`+Null+`
+|`+String+`
 |Beer Name
 
 |`+beerStyle+`
-|`+Null+`
+|`+String+`
 |Beer Style
 
 |`+upc+`
-|`+Null+`
+|`+Number+`
 |UPC of Beer
 
 |`+price+`
-|`+Null+`
+|`+Number+`
 |Price
 
 |`+quantityOnHand+`

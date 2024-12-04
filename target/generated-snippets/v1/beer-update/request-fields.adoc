@@ -2,9 +2,9 @@
 |Path|Type|Description|Constraints
 
 |id
-|Null
+|String
 |The Id of the Beer
-|Must be null
+|Must not be null
 
 |version
 |Null

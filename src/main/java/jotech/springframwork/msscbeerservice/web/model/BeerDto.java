@@ -19,7 +19,7 @@ import java.util.UUID;
 @Builder
 public class BeerDto {
 
-    @Null
+    @NotNull
     private UUID id;
 
     @Null
