@@ -26,8 +26,8 @@ jobs:
           command: mvn -B -DskipTests clean package
       # Then run your tests!
       - run:
-          name: Test
-          command: mvn test
+         name: Test
+         command: mvn test
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows

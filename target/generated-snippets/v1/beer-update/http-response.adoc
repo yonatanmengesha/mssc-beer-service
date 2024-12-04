@@ -4,5 +4,5 @@ HTTP/1.1 204 No Content
 Content-Type: application/json
 Content-Length: 193
 
-{"id":"27991c9e-5d3d-445d-8a74-f062202d4183","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
+{"id":"82dd6c2f-56fa-49bb-92a0-1e4a5a25ac88","version":null,"createdDate":null,"lastModifiedDate":null,"beerName":"My Beer","beerStyle":"ALE","upc":123456789,"price":4.00,"quantityOnHand":null}
 ----

@@ -14,21 +14,23 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class BeerServiceImpl implements BeerService {
 
-    @Autowired
+
     BeerRepository beerRepository;
+
+    @Autowired
+    BeerMapper beerMapper;
+
 
     @Autowired
     public BeerServiceImpl(BeerRepository beerRepository) {
         this.beerRepository = beerRepository;
     }
 
-    @Autowired
-    public BeerServiceImpl(BeerMapper beerMapper) {
-        this.beerMapper = beerMapper;
-    }
+//    @Autowired
+//    public BeerServiceImpl(BeerMapper beerMapper) {
+//        this.beerMapper = beerMapper;
+//    }
 
-    @Autowired
-    BeerMapper beerMapper;
 
     @Override
     public BeerDto findBeerById(UUID beerId) {

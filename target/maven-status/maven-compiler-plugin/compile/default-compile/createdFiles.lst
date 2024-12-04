@@ -11,4 +11,6 @@ jotech\springframwork\msscbeerservice\web\mappers\BeerMapper.class
 jotech\springframwork\msscbeerservice\domain\Beer.class
 jotech\springframwork\msscbeerservice\web\model\BeerStyleEnum.class
 jotech\springframwork\msscbeerservice\web\model\BeerDto.class
+jotech\springframwork\msscbeerservice\service\BeerServiceImpl.class
+jotech\springframwork\msscbeerservice\service\BeerService.class
 jotech\springframwork\msscbeerservice\bootstrap\BeerLoader.class

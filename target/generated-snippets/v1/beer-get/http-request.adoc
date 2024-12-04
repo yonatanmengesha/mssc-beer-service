@@ -1,6 +1,6 @@
 [source,http,options="nowrap"]
 ----
-GET /api/v1/beer/805d07d4-3f86-49dc-afef-e681f0eec231?iscold=yes HTTP/1.1
+GET /api/v1/beer/de7237fb-89e2-4d5a-bade-e203b760ce59?iscold=yes HTTP/1.1
 Accept: application/json
 Host: dev.springframework.jotech:80
 
